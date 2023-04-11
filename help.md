@@ -58,7 +58,7 @@ jobs:
 ```
 
 
-
+## what is gitversion()
 
 
 The gitversion() method in a Jenkins Pipeline script is a step that invokes the GitVersion plugin. GitVersion is a tool designed to generate semantic version numbers based on your Git repository's history and branching strategy.
@@ -83,10 +83,12 @@ When the gitversion() method is called, it performs the following tasks:
 
 To access these variables in your Jenkins Pipeline script, you can use the env object after calling gitversion(). For example:
 
+```yaml
 script {
     gitversion()
     println "Generated version: ${env.SemVer}"
 }
+```
 
 
 In summary, the gitversion() method in a Jenkins Pipeline script is responsible for analyzing your Git repository's history, applying configuration rules, and generating a semantic version number that can be used throughout your build, test, and deployment processes.
@@ -127,6 +129,7 @@ Configure your Jenkins job to work with your Git repository:
 
 Update your Jenkins Pipeline script (e.g., Jenkinsfile) to include automated versioning using GitVersion. Below is a sample Jenkinsfile that demonstrates how to use the GitVersion plugin:
 
+```yaml
 
 pipeline {
     agent any
@@ -174,7 +177,7 @@ pipeline {
         }
     }
 }
-
+```
 
 In this example, the Versioning stage generates a semantic version using GitVersion. You can use the generated version throughout your Pipeline to tag builds, create releases, or update your project's version file.
 
