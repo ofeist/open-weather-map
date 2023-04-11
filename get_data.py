@@ -21,7 +21,8 @@ lon = '15.21'
 # Base URL for the weather API
 # api.openweathermap.org/data/2.5/weather?q=London&appid={API key}
 # base_url = 'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}'
-base_url = 'https://api.openweathermap.org/data/2.5/weather?'
+# base_url = 'https://api.openweathermap.org/data/2.5/weather?'
+base_url = 'https://api.openweathermap.org/data/2.5/forecast?'
 
 # Building the complete URL with the city name and API key
 complete_url = f'{base_url}lat={lat}&lon={lon}&appid={api_key}'
